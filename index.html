@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hokey Futbolu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div id="scoreboard">
+                <div class="team-score red-team">
+                    <span class="team-name">Kırmızı</span>
+                    <span id="score-red">0</span>
+                </div>
+                <div class="timer">Hedef: 3</div>
+                <div class="team-score blue-team">
+                    <span id="score-blue">0</span>
+                    <span class="team-name">Mavi</span>
+                </div>
+            </div>
+            
+            <div id="controls">
+                <div class="control-group">
+                    <label>Kırmızı Formasyon</label>
+                    <select id="formation-red">
+                        <option value="4-4-2">4-4-2</option>
+                        <option value="4-3-3">4-3-3</option>
+                        <option value="4-2-3-1">4-2-3-1</option>
+                        <option value="3-3-4">3-3-4</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Mavi Formasyon</label>
+                    <select id="formation-blue">
+                        <option value="4-4-2">4-4-2</option>
+                        <option value="4-3-3">4-3-3</option>
+                        <option value="4-2-3-1">4-2-3-1</option>
+                        <option value="3-3-4">3-3-4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="message-overlay" class="hidden">
+                <h1 id="message-text">Gol !</h1>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
